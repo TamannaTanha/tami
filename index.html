@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Button</title>
+  <style>
+    body{
+
+
+    }
+
+    .button{
+      background: url('la-mordue-cider_button-bg.png');
+      background-repeat: no-repeat;
+      width : 300px;
+      height: 75px;
+      text-align: center;
+      transform: translate(50%,50%);
+      position:relative;
+    }
+  .open-btn{
+    text-decoration: none;
+    font-size: 25px;
+    color:#fff;
+
+  }
+  .close-btn{
+    text-decoration: none;
+    font-size: 25px;
+    color:red;
+  }
+
+  .open-btn{
+    position:absolute;
+    top:24%;
+    left:40%;
+  }
+
+  .close-btn{
+    position:absolute;
+    top:10.5%;
+    left:20%;
+    display:none;
+  }
+
+
+  </style>
+</head>
+<body>
+  <div class="button">
+    <div>
+      <a class="open-btn" href="#">open</a>
+    </div>
+  </div>
+
+  <div>
+    <a class="close-btn" href="#">open</a>
+  </div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+  $('.open-btn').mouseenter(function(){
+    $('.close-btn').slideDown();
+    $('.open-btn').hide();
+  });
+  $('.close-btn').mouseleave(function(){
+    $('.open-btn').slideToggle();
+    $('.close-btn').hide();
+  });
+</script>
+
+</body>
+</html>
